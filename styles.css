@@ -1,0 +1,96 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Canvas para confeti */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+.title {
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Se adapta al tamaño de pantalla */
+    background-image: linear-gradient(45deg, #ff4e50, #ff6a88);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Animación para el título */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff4e50;
+    }
+    to {
+        text-shadow: 0 0 20px #ff6a88, 0 0 30px #ff4e50;
+    }
+}
+
+/* Mensaje */
+.message {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Galería de imágenes */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.images img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff6a88;
+}
+
+.images span {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Botón para la música */
+.play-music {
+    background-color: #ff4e50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.play-music:hover {
+    background-color: #ff6a88;
+}
